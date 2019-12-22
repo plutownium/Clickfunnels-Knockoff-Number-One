@@ -1,0 +1,31 @@
+.Image {
+	background-image: url("../../suit.jfif");
+	background-size: contain;
+	width: 900px;
+	height: 600px;
+	margin: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	/* border: 3px solid red; */
+}
+
+.Cap {
+	height: 100px;
+}
+
+.Upper {
+	/* border: 3px solid #73ad21; */
+	max-width: 500px;
+	text-align: left;
+	padding: 0px 0px 0px 40px;
+	color: #fff;
+}
+
+.Lower {
+	/* border: 3px solid #73ad21; */
+	max-width: 300px;
+	text-align: left;
+	padding: 0px 0px 0px 40px;
+	color: #fff;
+}
