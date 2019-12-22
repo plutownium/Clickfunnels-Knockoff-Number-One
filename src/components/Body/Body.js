@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
+import classes from "./Body.module.css";
+
 class Body extends Component {
 	render() {
 		return (
-			<div>
+			<div className={classes.Body}>
 				<div>
 					<p>{this.props.text1}</p>
 					<p>{this.props.text2}</p>

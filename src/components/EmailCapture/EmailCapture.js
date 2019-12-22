@@ -1,17 +1,31 @@
 import React from "react";
 
+import classes from "./EmailCapture.module.css";
+
 const emailCapture = () => {
 	return (
-		<div>
-			<p>Register Today</p>
+		<div className={classes.EmailCapture}>
+			<div>
+				<p>Register Today</p>
 
-			<input type="text"></input>
-			<input type="text"></input>
-			<input type="text"></input>
-			<input type="text"></input>
-			<input type="text"></input>
+				<p>First name</p>
+				<input type="text"></input>
+				<br />
+				<p>Last name</p>
+				<input type="text"></input>
+				<br />
+				<p>Company</p>
+				<input type="text"></input>
+				<br />
+				<p>Email</p>
+				<input type="email"></input>
+				<br />
+				<p>Phone number</p>
+				<input type="tel"></input>
+				<br />
 
-			<button>Register</button>
+				<button className={classes.button}>Register</button>
+			</div>
 		</div>
 	);
 };

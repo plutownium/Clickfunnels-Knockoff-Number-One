@@ -2,7 +2,7 @@
 	background-image: url("../../suit.jfif");
 	background-size: contain;
 	width: 900px;
-	height: 600px;
+	height: 400px;
 	margin: 0px;
 	margin-right: auto;
 	margin-left: auto;
@@ -11,7 +11,7 @@
 }
 
 .Cap {
-	height: 100px;
+	height: 50px;
 }
 
 .Upper {
