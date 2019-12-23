@@ -1,0 +1,12 @@
+.EmailCapture {
+	/* float: left; */
+	/* display: inline-block; */
+	width: 500px;
+	/* border: 1px solid green; */
+	background-color: rgba(167, 171, 228, 0.767);
+	padding: 20px 0px 50px 0px;
+}
+
+.button {
+	margin: 20px;
+}

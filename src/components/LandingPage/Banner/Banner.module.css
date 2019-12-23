@@ -1,0 +1,28 @@
+.Image {
+	background-image: url("../../../techy.jpg");
+	background-size: contain;
+	width: 900px;
+	height: 400px;
+	margin: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+.Cap {
+	height: 50px;
+}
+
+.Upper {
+	max-width: 500px;
+	text-align: left;
+	padding: 0px 0px 0px 40px;
+	color: #fff;
+}
+
+.Lower {
+	max-width: 300px;
+	text-align: left;
+	padding: 0px 0px 0px 40px;
+	color: #fff;
+}

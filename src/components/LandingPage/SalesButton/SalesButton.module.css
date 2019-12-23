@@ -1,0 +1,9 @@
+.SalesButton {
+	background-color: #fff;
+	color: #41a8d9;
+	border-color: #41a8d9;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px;
+	float: right;
+}

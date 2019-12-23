@@ -1,14 +1,19 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-import Banner from "./components/Banner/Banner";
-import SalesButton from "./components/SalesButton/SalesButton";
-import Body from "./components/Body/Body";
-import EmailCapture from "./components/EmailCapture/EmailCapture";
+import SalesButton from "./components/LandingPage/SalesButton/SalesButton";
+import LandingPage from "./components/LandingPage/LandingPage";
+import AuthContext from "./context/auth-context";
+import Customizer from "./components/Customizer/Customizer";
 
 class App extends Component {
 	state = {
+		bannerTextMain: "Live Webcast",
+		bannerTextSubtitle:
+			"New Ways to Mimic Websites For Maximum Learning Potential!",
+		bannerTextDate: "Saturday, December 21st, 2019",
+		bannerTextTime: "6:05 pm PST || 9:05 pm EST",
+		bannerTextDuration: "Placeholder text",
 		text1:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at varius nisi. Donec nulla orci, vulputate eu eleifend efficitur, blandit non velit.Proin volutpat malesuada urna in molestie.Sed efficitur orci a tellus porttitor pharetra. Donec eu iaculis mauris.Sed nec enim euismod, blandit quam non, condimentum mauris.",
 		text2:
@@ -18,18 +23,28 @@ class App extends Component {
 		text4: "Hope you will join us!"
 	};
 
+	modifyText = event => {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+
+		this.setState({
+			[name]: value
+		});
+	};
+
 	render() {
-		let containerStyle = {
-			display: "flex",
+		let float = {
+			// display: "flex",
 			// overflow: "auto",
-			margin: "auto",
-			width: "900px"
+			float: "left"
 		};
 		let container2 = {
 			// display: "flex",
 			overflow: "auto",
 			margin: "auto",
 			width: "900px"
+			// float: "left"
 		};
 
 		return (
@@ -39,20 +54,38 @@ class App extends Component {
 					{/* <img src={logo} className="App-logo" alt="logo" /> */}
 					<SalesButton />
 				</div>
-				<Banner></Banner>
+
 				<div>
-					<h3>Market to who matters</h3>
-				</div>
-
-				<div style={containerStyle}>
-					<Body
-						text1={this.state.text1}
-						text2={this.state.text2}
-						text3={this.state.text3}
-						text4={this.state.text4}
-					/>
-
-					<EmailCapture></EmailCapture>
+					<div style={float}>
+						<Customizer
+							bannerTextMain={this.state.bannerTextMain}
+							bannerTextSubtitle={this.state.bannerTextSubtitle}
+							bannerTextDate={this.state.bannerTextDate}
+							bannerTextTime={this.state.bannerTextTime}
+							text1={this.state.text1}
+							text2={this.state.text2}
+							text3={this.state.text3}
+							text4={this.state.text4}
+							changed={this.modifyText}
+						></Customizer>
+					</div>
+					<div>
+						<AuthContext.Provider
+							value={{
+								bannerTextMain: this.state.bannerTextMain,
+								bannerTextSubtitle: this.state
+									.bannerTextSubtitle,
+								bannerTextDate: this.state.bannerTextDate,
+								bannerTextTime: this.state.bannerTextTime,
+								text1: this.state.text1,
+								text2: this.state.text2,
+								text3: this.state.text3,
+								text4: this.state.text4
+							}}
+						>
+							<LandingPage style={float}></LandingPage>
+						</AuthContext.Provider>
+					</div>
 				</div>
 			</div>
 		);
